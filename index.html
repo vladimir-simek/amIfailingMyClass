@@ -7,6 +7,35 @@
     <script src="main.js"></script>
 </head>
 <body>
+<div class="top">
+    <h1 class="topName">Am I failing my class?</h1>
+</div>
 
+<div class="centerDiv">
+    <div class="centerCenterDiv">
+        <div id="rowsDiv" class="rowsDiv">
+            <div class="row">
+
+                <div id="realRow" class="realRow">
+                    <a>Input your grade and weight:</a>
+                    <label for="grade"></label><input placeholder="Grade" class="inputNumber" id="grade" type="number">
+                    <label for="weight"></label><input placeholder="Weight" class="inputNumber" id="weight" type="number">
+                </div>
+            </div>
+
+        </div>
+        <div class="generatorDiv">
+            <div class="generator">
+                <div class="generatorTop">
+                    <input value="New Col" id="generatorButton" class="generatorButton" type="button" onclick="generateNewCol()">
+                    <input value="Calculate" id="calculatorButton" class="generatorButton" type="button" onclick="calculateGrade()">
+                </div>
+                <div class="generatorBottom">
+                    <a>Are you failing your class?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
