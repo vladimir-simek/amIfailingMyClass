@@ -1,5 +1,7 @@
 let num = 1
 let result = 0
+let sum = 0
+let weightSum = 0+0
 let generateNewCol = function () {
     let div = document.createElement("div")
     div.className = "row"
@@ -40,14 +42,42 @@ let generateNewCol = function () {
 let calculateGrade = function () {
     let inputGrade
     let inputWeight
-    for (let i = 0; i < num + 1; i++) {
-            inputGrade = document.getElementById("grade"+num).value
-            inputWeight= document.getElementById("weight"+num).value
-
-
-        result += (inputGrade * inputWeight)
+    for (let i = 0; i < num ; i++) {
+        inputGrade = parseInt(document.getElementById("grade" + i).value)
+        inputWeight = parseInt(document.getElementById("weight" + i).value)
+        sum += inputGrade * inputWeight
+        weightSum += inputWeight
 
     }
-    console.log(result)
+
+    result = (sum / weightSum)
+
+    /*let output = document.createElement("a")*/
+    let stb
+    const ass = document.querySelector(".sda")
+
+    if (result > 40) {
+        //stb = document.createTextNode("You are not! Your grade is " + result)
+        const ssa = document.createElement("a")
+        ssa.innerHTML = "You are not failing your class! Your grade is " + result + "."
+        ssa.className = "sda"
+        ass.parentNode.replaceChild(ssa, ass)
+    } else {
+        //stb = document.createTextNode("Yes you are! Your grade is " + result)
+        const ssa = document.createElement("a")
+        ssa.innerHTML = "You are failing your class! Your grade is " + result +"."
+        ssa.className = "sda"
+        ass.parentNode.replaceChild(ssa, ass)
+    }
+
+
+
+
+    //output.appendChild(stb)
+    //document.getElementById("sss").appendChild(output)
+
+    sum = 0
+    weightSum = 0
+    result = 0;
 }
 
